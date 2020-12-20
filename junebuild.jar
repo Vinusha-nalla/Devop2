@@ -1,0 +1,26 @@
+package PackageBuild1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class BuildJune {
+
+    public static void main(String[] args) throws InterruptedException {
+    	System.out.println("Step1: Declare in the path of the Chrome driver");
+
+    	String path ="C:\\Users\\Admin\\Downloads\\chromedriver83/chromedriver.exe";
+    	System.out.println("Step2: Set the property- chromedriver");
+    	System.setProperty("webdriver.chrome.driver",path);
+
+    	System.out.println("Step3: Instantiate Webdriver for  Chrome browser");
+    	WebDriver driver=new ChromeDriver();
+    	
+		System.out.println("Step4: Declare the launching website");
+    String baseUrl = "https://www.h2kinfosys.com/sample-resumes";
+    System.out.println("Step5: Launcha browser with the URl");
+    driver.get(baseUrl);
+    System.out.println("Step6: Close the browser tab");
+    Thread.sleep(10000);
+    driver.close();
+    }
+   }
